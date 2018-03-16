@@ -67,8 +67,8 @@
     <td class="table__action">
       {% if not email.verified or user.emails|length > 1 and not email.primary%}
       <nav class="dropdown dropdown--with-icons dropdown--wide">
-    		<ul>
-    			<li class="dropdown__trigger">
+        <ul>
+          <li class="dropdown__trigger">
             <button class="button button--primary" aria-haspopup="true" aria-expanded="false">
               Options
               <span class="dropdown__trigger-caret">
@@ -76,7 +76,7 @@
                 <span class="sr-only">view submenu</span>
               </span>
             </button>
-    				<ul class="dropdown__content">
+            <ul class="dropdown__content">
               <li>
                 {% if not email.verified %}
                 <form method="POST">
@@ -113,9 +113,9 @@
                 </form>
                 {% endif %}
               </li>
-    				</ul>
-    			</li>
-    		</ul>
+            </ul>
+          </li>
+        </ul>
       </nav>
       {% endif %}
     </td>

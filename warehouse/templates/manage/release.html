@@ -58,8 +58,8 @@
         <td class="table__upload">{{ file.upload_time|format_date() }}</td>
         <td class="table__options">
           <nav class="dropdown dropdown--with-icons pull-right">
-        		<ul>
-        			<li class="dropdown__trigger">
+            <ul>
+              <li class="dropdown__trigger">
                 <button class="button button--primary" aria-haspopup="true" aria-expanded="false">
                   Options
                   <span class="dropdown__trigger-caret">
@@ -67,7 +67,7 @@
                     <span class="sr-only">view submenu</span>
                   </span>
                 </button>
-        				<ul class="dropdown__content">
+                <ul class="dropdown__content">
                   <li>
                     <a href="{{ request.route_url('packaging.file', path=file.path) }}" class="dropdown__link">
                       <i class="fa fa-download" aria-hidden="true"></i>
@@ -82,13 +82,13 @@
                   </li>
                   <li>
                     {% set extra_fields %}
-                      <input name="file_id" type="hidden" value="{{ file.id }}">
+                    <input name="file_id" type="hidden" value="{{ file.id }}">
                     {% endset %}
                     {{ confirm_dropdown("Delete File", "Filename", file.filename, index=loop.index, extra_fields=extra_fields) }}
                   </li>
-        				</ul>
-        			</li>
-        		</ul>
+                </ul>
+              </li>
+            </ul>
           </nav>
         </td>
       </tr>

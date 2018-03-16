@@ -45,8 +45,8 @@
             </td>
           <td class="table__options">
             <nav class="dropdown dropdown--with-icons">
-          		<ul>
-          			<li class="dropdown__trigger">
+              <ul>
+                <li class="dropdown__trigger">
                   <button class="button button--primary" aria-haspopup="true" aria-expanded="false">
                     Options
                     <span class="dropdown__trigger-caret">
@@ -54,7 +54,7 @@
                       <span class="sr-only">view submenu</span>
                     </span>
                   </button>
-          				<ul class="dropdown__content">
+                  <ul class="dropdown__content">
                     <li>
                       <a href="{{ request.route_path('manage.project.release', project_name=project.name, version=release.version) }}" class="dropdown__link">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -71,9 +71,9 @@
                       {% set action = request.route_path('manage.project.release', project_name=project.name, version=release.version) %}
                       {{ confirm_dropdown("Delete Release", "Version", release.version, index=loop.index, action=action) }}
                     </li>
-          				</ul>
-          			</li>
-          		</ul>
+                  </ul>
+                </li>
+              </ul>
             </nav>
           </td>
         </tr>
