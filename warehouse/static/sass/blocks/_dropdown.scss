@@ -33,6 +33,13 @@
   position: relative;
   display: inline-block;
 
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
   &__trigger {
     cursor: pointer;
   }
@@ -54,11 +61,7 @@
     display: none;
   }
 
-  // Show content if triggered
-  &__trigger:hover + &__content,
-  &__trigger:focus + &__content,
-  &__trigger:active + &__content,
-  &__content:hover {
+  &__trigger:hover .dropdown__content {
     display: block;
   }
 
@@ -108,6 +111,11 @@
       border-bottom-color: $header-border-color;
       background-color: $header-background-color;
       color: $white;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
 
       &:hover {
         background-color: darken($header-background-color, 1.5);
